@@ -1,0 +1,52 @@
+VIEW
+    Jatekter osztály - megjeleníti az elemeket
+            példányosítja az Elem osztályt 9x
+    Elem   osztály
+    adattagok 
+        div, p tageket megjelenítse
+        this.divElem=
+        this.pElem=
+        allapot // true/false
+        index
+        kattintás eseménykezelő
+            //ezért fog tudni a kontrollerrel kommunikálni a view
+            this.kattintasTrigger()
+            itt változtatjuk az allapot-ot
+ 
+    tagfüggvények
+        kattintásTrigger()
+            új eseményt hoz létre, ezzel tudunk kommunikálni a kontrollerrel
+            átad az objektum adatokat magáról. - index-ét 
+ 
+        setErtek(jel)
+            beállítja az elem tartalmát X-re vagy O-ra
+ 
+
+CONTROLLER
+szabályozza a játék működését
+    JatekKontroller osztály
+        //kapcsolatot hoz létre a modell és a view között
+        példányosítja a view-t! 
+        példányosítja a modell-t! 
+ 
+        feliratkozik a view eseményére. 
+                megtudja a view-tól, hogy melyik elemre kattintottunk
+                megmondja a modellnek, hogy mire kattintottunk
+
+                //megkérdezi a modelltől, hogy nyert-e valaki? 
+                megkérdezi a modelltől, hogy ki kövtkezik? (x, O)
+                megmondja a view-nak, hogy melyik elembe kell beírni (x, o)
+ 
+ 
+ 
+MODELL
+reprezentálja a játékot
+    JatekModell osztály 
+
+        Hogy néz ki a tábla? [x,-, -, o, - , x, -, -, -]
+        ellenőrzések - sorban, oszlopban, átlóban van-e nyertes
+        ki nyert
+ 
+        ki jön? X / O 
+ 
+    getKovetkezojatekos()
